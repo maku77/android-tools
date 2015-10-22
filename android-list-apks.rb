@@ -5,7 +5,7 @@
 #
 # Usage:
 #   $ cd <project_root>
-#   $ ruby android-enum-apks.rb <search_path>
+#   $ ruby android-list-apks.rb <search_path>
 #
 # [2010-05-11] Masatoshi.Ohta
 #
