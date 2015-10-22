@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 #
-# List all 'exported' attribute values of components
-# (Activity/Service/BroadcastReceiver) in AndroidManifest.xml
+# List all components defined in AndroidManifest.xml
 #
 # Usage:
-#   $ ./android-check-export.py AndroidManifest.xml
+#   $ ./android-list-components.py AndroidManifest.xml
 #
 import os.path
 import sys
@@ -35,5 +34,6 @@ if __name__ == '__main__':
     root = ElementTree.parse(manifest).getroot()
     dump_nodes('Activities:', root.findall('./application/activity'))
     dump_nodes('Services:', root.findall('./application/service'))
-    dump_nodes('Receivers:', root.findall('./application/receiver'))
+    dump_nodes('BroadcastReceivers:', root.findall('./application/receiver'))
+    dump_nodes('ContentProviders:', root.findall('./application/provider'))
 
