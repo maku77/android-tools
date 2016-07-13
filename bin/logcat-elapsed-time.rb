@@ -12,6 +12,9 @@
 #
 require 'time'  # for Time.parse
 
+# Avoid invalid byte sequence error when calling String#sub
+Encoding.default_external = 'utf-8'
+
 TIME_PATTERN = /\d\d-\d\d \d\d:\d\d:\d\d.\d\d\d(\d\d\d)?/
 base_time = nil
 
